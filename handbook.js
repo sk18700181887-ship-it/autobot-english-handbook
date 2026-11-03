@@ -164,7 +164,7 @@ window.addEventListener('message',event=>{
     stopAll();const label=$('#model-word');label.querySelector('b').textContent=message.word;label.querySelector('small').textContent=partNames[message.part];label.hidden=false;clearTimeout(modelWordTimer);modelWordTimer=setTimeout(()=>label.hidden=true,5000);void audio.speak(message.word,{slow:true});
   }
 });
-$('#lesson-model').addEventListener('load',()=>{labReady=false;labTransportReady=false;configureModel();postModel({type:'handbook:ping'});clearTimeout(modelTimeout);modelTimeout=setTimeout(()=>{if(!labReady){$('#model-pending b').textContent='3D 伙伴还在准备';$('#model-pending small').textContent='可以先听词，也可刷新页面重试。';}},25000);});
+$('#lesson-model').addEventListener('load',()=>{labReady=false;labTransportReady=false;configureModel();postModel({type:'handbook:ping'});clearTimeout(modelTimeout);modelTimeout=setTimeout(()=>{if(!labReady){$('#model-pending b').textContent='3D 伙伴还在准备';$('#model-pending small').textContent='模型仍在下载，可以先听词；稍等会自动显示。';}},25000);});
 window.addEventListener('popstate',()=>renderWeek(new URLSearchParams(location.search).get('week')||1));
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stopAll();});
 window.addEventListener('pagehide',event=>{stopAll();if(!event.persisted){audio.dispose();scenePlay.dispose();}});
