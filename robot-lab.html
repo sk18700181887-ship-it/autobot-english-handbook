@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102d30"><title>汽车人维修站 · 拆一拆，说英语</title>
+  <script>if(new URLSearchParams(location.search).get('embed')==='handbook')document.documentElement.classList.add('handbook-embed');</script>
+  <link rel="icon" href="./assets/badge.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./robot-lab.css">
+  <script type="module" src="./robot-lab.bundle.js"></script>
+</head>
+<body>
+  <header class="lab-header"><nav class="lab-links" aria-label="学习入口"><a href="./speaking.html" class="back-link">↖ 返回口语基地</a><a href="./handbook.html" class="handbook-link">学习手册 ↗</a></nav><span class="lab-brand"><i>ϟ</i> 汽车人维修站 <small>ROBOT REPAIR LAB</small></span><span class="header-note">动动手，也动动嘴</span></header>
+  <main class="lab-layout">
+    <section class="robot-workspace" aria-label="机器人拆解操作区">
+      <div class="workspace-intro"><div><span class="eyebrow">EARTH BASE / MAINTENANCE BAY 01</span><h1>拆一拆，<em>说英语。</em></h1><p>看看熟悉的伙伴，是由哪些部位组成的。</p></div><span class="bay-id">01<small>REPAIR<br>& REBUILD</small></span></div>
+      <div class="character-switch" role="group" aria-label="选择拆解伙伴"><button data-robot="bumblebee" aria-pressed="true"><img src="./assets/bumblebee.png" alt=""><span>大黄蜂<small>BUMBLEBEE</small></span><i></i></button><button data-robot="optimus" aria-pressed="false"><img src="./assets/optimus.png" alt=""><span>擎天柱<small>OPTIMUS PRIME</small></span><i></i></button></div>
+      <div class="viewport-shell">
+        <div class="viewport-heading"><span><i></i> <b id="robot-name">BUMBLEBEE</b><small id="embedded-scene-name">汽车人基地</small></span><span id="view-state">完整组装</span></div>
+        <div id="scene" role="img" aria-label="大黄蜂可旋转三维模型"></div>
+        <div id="part-focus" class="part-focus" hidden><span class="focus-eyebrow">部位锁定 · 钛金高亮</span><div><b id="focus-word">Head</b><span id="focus-part">头部</span></div><button id="clear-highlight" type="button">恢复原色 ↺</button></div>
+        <div id="load-status" class="load-status" role="status"><span class="loader"></span><b>伙伴正在进入维修站…</b><small>第一次打开需要读取本地模型</small></div>
+        <button id="reset-camera" class="camera-button" aria-label="恢复初始观察视角">↺ 正面视角</button>
+        <div class="scene-hint"><span>拖动旋转 · 滚轮缩放 · 点零件认识它</span><small>身体部位拆装示意</small></div>
+      </div>
+      <div class="assembly-controls"><button id="assemble" class="assembly-button active" aria-pressed="true">◈ 完整组装</button><button id="explode" class="assembly-button" aria-pressed="false">⤢ 拆开看看</button><button id="tour" class="assembly-button" aria-pressed="false">▷ 自动演示</button><label class="explode-slider">拆解程度<input id="separation" type="range" min="0" max="100" value="0" aria-label="机器人拆解程度"><output id="separation-value">0%</output></label></div>
+    </section>
+    <aside class="lesson-panel" aria-label="英语维修练习">
+      <div class="lesson-title"><span class="eyebrow">TODAY'S LITTLE ENGINEER</span><h2>小小维修师，<br>轮到你啦。<span>✦</span></h2><p>点一个部位，听一听，再说一句。</p></div>
+      <div class="part-grid" role="group" aria-label="认识身体部位">
+        <button data-part="head" aria-pressed="true"><span>01</span><b>Head</b><small>头部</small></button>
+        <button data-part="chest" aria-pressed="false"><span>02</span><b>Chest</b><small>胸甲</small></button>
+        <button data-part="arms" aria-pressed="false"><span>03</span><b>Arms</b><small>手臂</small></button>
+        <button data-part="hands" aria-pressed="false"><span>04</span><b>Hands</b><small>双手</small></button>
+        <button data-part="legs" aria-pressed="false"><span>05</span><b>Legs</b><small>双腿</small></button>
+        <button data-part="feet" aria-pressed="false"><span>06</span><b>Feet</b><small>双脚</small></button>
+      </div>
+      <section class="word-card" aria-label="当前身体部位"><span class="mini-label">LOOK & SAY</span><div class="word-heading"><h3 id="part-word">Head</h3><button id="say-word" aria-label="听当前身体部位英文">◖))</button></div><p id="part-sentence">This is his head.</p><span id="part-translation">这是他的头。</span></section>
+      <section class="command-section"><div class="command-heading"><h3>试着发出维修指令</h3><button id="say-command">听示范 ↗</button></div><p id="mission-command" class="mission-command">Show me his head.</p><p id="mission-translation" class="mission-translation">让我看看他的头。</p><div class="command-options"><button data-command="Show me his head.">看看头部</button><button data-command="Open the chest.">打开胸甲</button><button data-command="Take off the arms.">拆开手臂</button><button data-command="Put the arms back.">装回手臂</button><button data-command="Take the robot apart.">全部拆开</button><button data-command="Assemble the robot.">重新组装</button></div></section>
+      <button id="lab-mic" class="mic-button" aria-pressed="false"><span>♩</span><b>点一下，说出英语指令</b><i>▂ ▅ ▇ ▃ ▅</i></button>
+      <p id="speech-status" class="speech-status" role="status">可以开口说，也可以点选指令或打字。</p>
+      <form id="command-form" class="command-form"><label class="sr-only" for="command-input">用英语输入维修指令</label><input id="command-input" maxlength="160" autocomplete="off" placeholder="例如 Open the chest."><button type="submit" aria-label="发送维修指令">↗</button></form>
+      <div id="command-feedback" class="command-feedback" role="status">认识伙伴的身体，完成你的第一次维修。</div>
+      <div class="lab-progress"><div><b id="learned-count">0 / 6</b><span>已探索的部位</span></div><div><b id="command-count">0</b><span>已完成的指令</span></div><button id="stop-speech" hidden>停止声音 ■</button></div>
+    </aside>
+  </main>
+  <footer class="lab-footer"><span>TAKE IT APART. PUT IT TOGETHER. SAY IT OUT LOUD.</span><span>和伙伴一起，勇敢说英语。 · <a href="./robot-lab-credits.html">模型与声音来源</a></span></footer>
+  <noscript>请启用 JavaScript，打开机器人维修站。</noscript>
+</body>
+</html>

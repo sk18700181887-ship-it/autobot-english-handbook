@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#143334">
+  <title>模型与声音来源 · 汽车人维修站</title>
+  <link rel="icon" href="./assets/badge.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./robot-lab.css">
+</head>
+<body>
+  <header class="lab-header"><a href="./robot-lab.html" class="back-link">↖ 返回维修站</a><span class="lab-brand"><i>ϟ</i> 汽车人维修站 <small>ROBOT REPAIR LAB</small></span><span class="header-note">模型与声音来源</span></header>
+  <main class="lab-layout">
+    <section class="robot-workspace" aria-labelledby="credits-title">
+      <div class="workspace-intro"><div><span class="eyebrow">CREDITS / LOCAL LEARNING PROJECT</span><h1 id="credits-title">伙伴的<em>制作档案。</em></h1><p>模型署名、教学改动与录音来源。</p></div></div>
+      <article class="lesson-panel">
+        <span class="eyebrow">BUMBLEBEE / CAMARO TLK</span>
+        <h2>大黄蜂</h2>
+        <p>采用 Transformers Online 游戏的 Camaro / TLK 风格模型。XPS 公开发布者为 <strong>JoinSpider</strong>，原发布页另署名 <strong>Spooky-Majora</strong> 为 SFM Port。</p>
+        <p><a href="https://www.deviantart.com/joinspider/art/Transformers-Online-Bumblebee-887594154">JoinSpider 原发布页</a> · <a href="https://www.mediafire.com/file/g70thqtfzwif4il/Bumblebee.rar/file">原发布者提供的公开下载页</a></p>
+        <p>本地教学版重建静态姿态，校正 UV，保留原颜色与法线纹理，再按原骨骼权重分成 11 个身体教学组。26,010 个三角面、顶点属性、材质与内嵌贴图均保留；不含原骨骼动画或车辆变形。</p>
+        <p>原发布页提供公开下载，但没有写明独立的再使用许可。回链原发布的 <a href="https://sketchfab.com/3d-models/bumblebee-tlk-transformers-onine-game-06339e733247424d88907f68012af69c">Kairi DC2 镜像</a>标注 CC Attribution；该标签属于镜像发布者声明，不能据此认定原作者、游戏方或角色权利方授予了相同许可。本页为家庭英语学习演示，保留来源与改动说明。</p>
+      </article>
+      <br>
+      <article class="lesson-panel">
+        <span class="eyebrow">OPTIMUS PRIME / THE LAST KNIGHT</span>
+        <h2>擎天柱</h2>
+        <p><strong>Optimus Prime TLK New Model</strong> by <strong>Voon Hong Liang (vhongliang)</strong>，按来源页面标示的 <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0（CC BY 4.0）</a>使用。原作者包名同时保留 Elixir Creeper 署名。</p>
+        <p><a href="https://sketchfab.com/3d-models/optimus-prime-tlk-new-model-758de951c78843f9b863247159907f07">模型来源页</a> · <a href="https://sketchfab.com/vhongliang">作者主页</a></p>
+        <p>本地改动：按原始 OBJ 的独立对象重建为 335 个 mesh，加入头、胸、左右臂、手、腿、脚的 10 个教学父组。保留原三角面顶点属性字节、材质、贴图和眼部对象，没有生成或重塑几何。</p>
+        <p>Attribution: “Optimus Prime TLK New Model” by Voon Hong Liang (vhongliang), CC BY 4.0. Modified by splitting the original OBJ objects and adding teaching body-part groups.</p>
+      </article>
+    </section>
+    <aside class="lesson-panel" aria-label="声音和程序来源">
+      <span class="eyebrow">VOICE / CODE</span>
+      <h2>声音与程序</h2>
+      <p>维修站的 18 项固定教学词句在本地播放。Head 复用原课程录音；另 17 条 WAV 由 Windows System.Speech / SAPI 的 <strong>Microsoft Zira Desktop（en-US）</strong>离线合成。原课程 236 条录音使用 Jenny 合成音色。它们都是合成教学音频，没有克隆电影演员的声音。</p>
+      <p>浏览器语音识别用于接收英语指令，可能使用浏览器提供商的在线服务。该功能不提供发音评分。此次验证使用受控识别结果，未录制真人声音。</p>
+      <div class="lab-progress"><span>本地程序依赖</span></div>
+      <p><a href="https://threejs.org/">Three.js</a>：MIT License，Copyright © 2010–2026 Three.js authors。完整许可随程序保存在 <a href="./vendor/three.LICENSE">vendor/three.LICENSE</a>。</p>
+      <p>可选的 <a href="https://github.com/google/draco">Google Draco</a> 解码器：<a href="https://github.com/google/draco/blob/main/LICENSE">Apache License 2.0</a>。解码文件随程序存于本地 <code>vendor/draco/</code>；当前模型无需在线加载库或模型。</p>
+      <p>本维修站基于已安装的 <a href="https://github.com/elvarofficial/teardown">teardown</a> 拆解交互思路接入现有口语学习网页。模型采用身体部位教学分组，不表示电影设定中的真实工程结构。</p>
+      <div class="lab-progress"><span>来源记录</span></div>
+      <p>完整模型来源、文件哈希、分组脚本、几何审计与声音生成记录随项目保存在 <code>reference/机器人维修站来源/</code>。本页只展示必要署名与说明。</p>
+      <p>这是本地角色主题学习作品，与变形金刚官方无关联；第三方模型来源页面的许可记录不代表角色商标及其他权利的一并授权。</p>
+      <p><a href="./robot-lab.html">回到维修站 →</a> · <a href="./speaking.html">回到口语基地 →</a></p>
+    </aside>
+  </main>
+  <footer class="lab-footer"><span>TAKE IT APART. PUT IT TOGETHER. SAY IT OUT LOUD.</span><span>来源记录更新：2026-11-03</span></footer>
+</body>
+</html>

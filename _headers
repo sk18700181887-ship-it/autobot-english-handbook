@@ -1,0 +1,27 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), geolocation=(), microphone=(self)
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/*
+  Cache-Control: public, max-age=86400
+
+/assets/robots/*.glb
+  Content-Type: model/gltf-binary
+
+/vendor/draco/*.wasm
+  Content-Type: application/wasm
+  Cache-Control: public, max-age=86400
+
+/audio/*
+  Cache-Control: public, max-age=86400
+
+/robot-lab-audio/*
+  Cache-Control: public, max-age=86400
+
+/handbook-audio/*
+  Cache-Control: public, max-age=86400
+
+/downloads/*
+  Cache-Control: public, max-age=86400

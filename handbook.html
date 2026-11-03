@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173d3a">
+  <title>小小汽车人 · 12周英语学习手册</title>
+  <link rel="icon" href="./assets/badge.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./handbook.css">
+  <link rel="stylesheet" href="./handbook-play.css">
+  <script type="module" src="./handbook.js"></script>
+</head>
+<body>
+<header class="book-header">
+  <a class="book-brand" href="./handbook.html"><span class="brand-symbol">ϟ</span><span><b>小小汽车人</b><small>MY FIRST ENGLISH ADVENTURE</small></span></a>
+  <nav aria-label="手册工具"><a href="./speaking.html">口语基地 ↗</a><button id="wordbank-open">词语宝库</button><button id="parents-open">陪练指南</button><a class="print-link" href="./handbook-print.html" target="_blank">打印手册 ↗</a></nav>
+</header>
+<div class="book-shell">
+  <aside class="book-sidebar" aria-label="十二周课程目录">
+    <div class="sidebar-heading"><span class="eyebrow">THE ADVENTURE MAP</span><h2>我们的冒险地图<span>12 周 · 慢慢来</span></h2></div>
+    <div class="map-progress"><div><span id="completed-label">0 / 12 周有足迹</span><span>✦</span></div><progress id="book-progress" max="12" value="0" aria-label="有学习足迹的周数"></progress></div>
+    <nav id="week-map" aria-label="选择一周"></nav>
+    <div class="sidebar-note"><b>说一个词，也很棒。</b><p>每天约 15 分钟，和大人一起玩。喜欢的主题，可以再来一周。</p><span>FOR OUR LITTLE CAPTAIN · AGE 6</span></div>
+  </aside>
+  <main id="book-main">
+    <section class="chapter-heading" aria-labelledby="chapter-title">
+      <div><span class="chapter-kicker"><span id="chapter-number">WEEK 01</span><i></i><span id="chapter-stage">认识汽车人</span></span><h1 id="chapter-title">你好，汽车人<span>Hello, Autobot!</span></h1><p id="chapter-goal">和大黄蜂、擎天柱一起，勇敢说出第一句。</p></div>
+      <div class="chapter-stamp" aria-hidden="true"><span>JUNIOR</span><b>ϟ</b><span>CAPTAIN</span></div>
+    </section>
+    <div class="daily-strip"><span><b>本周的小脚印</b><small>玩过一天，点亮一颗星</small></span><div id="day-stars" role="group" aria-label="本周七天练习记录"></div><span class="daily-time">◷ 每天约 15 分钟</span></div>
+    <div class="learning-grid">
+      <section class="scene-card" aria-labelledby="scene-title">
+        <div class="scene-heading"><div><span class="eyebrow" id="scene-tag">EARTH BASE / 01</span><h2 id="scene-title">汽车人集合基地</h2></div><span class="scene-live"><i></i> 3D 探索</span></div>
+        <p class="scene-story" id="scene-story"></p>
+        <div class="companion-switch" role="group" aria-label="选择三维伙伴"><button data-character="bumblebee" aria-pressed="true"><img src="./assets/bumblebee.png" alt=""><span>大黄蜂<small>BUMBLEBEE</small></span><i></i></button><button data-character="optimus" aria-pressed="false"><img src="./assets/optimus.png" alt=""><span>擎天柱<small>OPTIMUS PRIME</small></span><i></i></button></div>
+        <div class="model-window">
+          <iframe id="lesson-model" src="./robot-lab.html?embed=handbook&amp;character=bumblebee" title="课程里的汽车人三维互动" loading="eager"></iframe>
+          <div class="model-pending" id="model-pending" role="status"><span class="loading-gear">⚙</span><b>伙伴正在就位…</b><small>第一次打开需要读取本地 3D 模型</small></div>
+          <div id="model-word" class="model-word" hidden><span>YOU FOUND IT!</span><b></b><small></small></div>
+        </div>
+        <div class="model-controls" role="group" aria-label="三维操作"><button data-model-action="explode">⤢ 拆开看看</button><button data-model-action="assemble">◈ 重新组装</button><button data-model-action="reset" aria-label="恢复三维伙伴正面视角">↺ 正面</button></div>
+        <div id="scene-play" class="scene-play-host"></div>
+        <div class="scene-task"><span>小队长的 3D 任务</span><p id="lab-prompt"></p><button id="lab-demonstrate">让伙伴示范 ↗</button></div>
+        <p class="model-note">拖动旋转 · 双指或滚轮缩放 · 点击零件听单词<br>电影造型身体分组示意 · <a href="./robot-lab-credits.html" target="_blank">模型与声音来源</a></p>
+      </section>
+      <section class="activity-card" aria-labelledby="activity-title">
+        <div class="activity-heading"><div><span class="eyebrow">LITTLE STEPS, BIG ADVENTURES</span><h2 id="activity-title">听一听，就能开始。</h2></div><span id="step-count">01 / 04</span></div>
+        <div class="activity-tabs" role="tablist" aria-label="课程四个环节"><button id="tab-words" role="tab" aria-controls="panel-words" aria-selected="true" data-step="words"><span>01</span>听单词</button><button id="tab-chant" role="tab" aria-controls="panel-chant" aria-selected="false" data-step="chant"><span>02</span>拍手唱</button><button id="tab-talk" role="tab" aria-controls="panel-talk" aria-selected="false" data-step="talk"><span>03</span>说一说</button><button id="tab-mission" role="tab" aria-controls="panel-mission" aria-selected="false" data-step="mission"><span>04</span>出任务</button></div>
+        <div id="panel-words" class="activity-panel" role="tabpanel" aria-labelledby="tab-words">
+          <div class="panel-intro"><div><h3>今天先交三个词朋友</h3><p>点一下听声音，指一指，说一说。</p></div><button id="rotate-words" class="quiet-button">换三个 ↻</button></div>
+          <div id="today-words" class="today-words"></div>
+          <div class="all-words-heading"><span>本周词语地图</span><span id="word-count"></span></div><div id="all-words" class="all-words" aria-label="本周全部词汇"></div>
+          <div class="sentence-prompt"><span>本周的小句子 · 每次选一句</span><div id="key-patterns"></div></div>
+          <p class="gentle-note">不着急背单词，也不用写。能指对、愿意模仿，就很棒。</p>
+        </div>
+        <div id="panel-chant" class="activity-panel" role="tabpanel" aria-labelledby="tab-chant" hidden>
+          <div class="panel-intro"><div><h3>跟着汽车人的节拍</h3><p>听伙伴一句，再留四拍给你。</p></div><span id="bpm-label" class="bpm-pill">84 BPM</span></div>
+          <div class="rhythm-pad"><div class="rhythm-caption"><span id="rhythm-phase">准备好小手了吗？</span><span>拍 · 拍 · 说 · 说</span></div><div class="beat-dots" id="beat-dots" aria-label="四拍节奏"><i>1</i><i>2</i><i>3</i><i>4</i></div><div id="chant-lines" class="chant-lines"></div><button id="chant-play" class="primary-button">♫ 开始节奏跟读</button><p>原创轻鼓点 + 简单旋律 · 轻轻拍手，坐着也能玩</p></div>
+          <label class="tempo-control" for="chant-tempo">想慢一点吗？<select id="chant-tempo"><option value="72">慢慢来 · 72 拍</option><option value="84" selected>轻快一点 · 84 拍</option><option value="96">熟悉以后 · 96 拍</option></select></label>
+          <p class="gentle-note">想只听一句？点歌词就能听。节奏播放一遍自动结束。</p>
+        </div>
+        <div id="panel-talk" class="activity-panel" role="tabpanel" aria-labelledby="tab-talk" hidden>
+          <div class="panel-intro"><div><h3>大黄蜂和擎天柱来找你啦</h3><p>听一句、接一句。孩子的台词可以自己换。</p></div><button id="dialogue-play" class="quiet-button">▶ 听一段示范</button></div>
+          <div id="dialogue-lines" class="dialogue-lines"></div><p class="gentle-note">轮到“小队长”时，停一停，让孩子来接话。点任意一句可单独重听。</p>
+        </div>
+        <div id="panel-mission" class="activity-panel" role="tabpanel" aria-labelledby="tab-mission" hidden>
+          <div class="mission-illustration"><img src="./assets/bumblebee.png" alt=""><span>YOUR MISSION<b>✦</b></span><img src="./assets/optimus.png" alt=""></div>
+          <span class="eyebrow">IT'S YOUR TURN, CAPTAIN!</span><h3 id="mission-title"></h3><p id="mission-instruction"></p><div class="mission-success"><span>可以这样完成</span><p id="mission-success"></p></div><button id="mission-done" class="primary-button">✦ 我们完成任务啦</button><div id="mission-celebration" class="mission-celebration" role="status" hidden>Mission complete! 这一周有你的勇敢足迹啦。</div><p id="review-note" class="gentle-note"></p>
+        </div>
+        <div class="step-navigation"><button id="step-back" class="quiet-button" disabled>← 上一步</button><span>听 → 拍 → 说 → 玩</span><button id="step-next">去拍手唱 →</button></div>
+      </section>
+    </div>
+    <details class="parent-pocket"><summary><span>给陪练的大人</span><b>一个小提示，让今天更轻松</b><span>＋</span></summary><p id="parent-tip"></p><p>孩子可以只说一个词、用动作回答，也可以请伙伴再示范一次。记录的是参与，不是发音分数。</p></details>
+    <div class="chapter-navigation"><button id="previous-week">← 上一周</button><span id="chapter-bottom">第 1 周 / 共 12 周</span><button id="next-week">下一周 →</button></div>
+    <footer class="book-footer"><span>12 周一起探索，给每次开口一点勇气。</span><span><a href="./downloads/小小汽车人-12周学习手册.pdf" download>下载 16 页 PDF 手册 ↓</a> · 6 岁亲子版</span></footer>
+  </main>
+</div>
+<div class="sound-bar" id="sound-bar" hidden><span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span><p id="sound-message" role="status">伙伴正在说…</p><button id="stop-audio">停止 ■</button></div>
+<div class="toast" id="toast" role="status" hidden></div>
+<dialog id="parents-dialog" class="book-dialog"><header><div><span class="eyebrow">A LITTLE HELP FOR GROWN-UPS</span><h2>每天一小段，开心更重要。</h2></div><button data-close aria-label="关闭陪练指南">×</button></header><p class="dialog-lead">这份手册按原来的 12 周计划保留词汇与句式，为 6 岁孩子加入两位汽车人伙伴、三维任务和原创节奏。</p><h3>约 15 分钟，顺着玩就好</h3><div id="daily-routine" class="daily-routine"></div><h3>陪练口袋卡</h3><div id="parent-guides" class="parent-guides"></div><details><summary>还可以怎么和孩子说？</summary><div id="parent-phrases" class="parent-phrases"></div></details><p class="dialog-footnote">点读使用本地合成录音，不是电影配音。手册不使用麦克风、不打发音分数；完成星星由孩子和家长自己记录，保存在当前浏览器。</p><a href="./handbook-print.html" target="_blank" class="primary-button">打开可打印学习手册 ↗</a></dialog>
+<dialog id="wordbank-dialog" class="book-dialog"><header><div><span class="eyebrow">WORDS TO EXPLORE</span><h2>汽车人的词语宝库</h2></div><button data-close aria-label="关闭词语宝库">×</button></header><p class="dialog-lead">保留原计划的 81 项扩展词语。按兴趣挑三个，点一下就能听。</p><label class="bank-search">找一个词<input id="bank-search" type="search" placeholder="输入英文或中文，例如 car / 车"></label><div id="bank-groups"></div><p id="bank-empty" hidden>暂时没找到，试试另一个词吧。</p></dialog>
+<noscript>请启用浏览器 JavaScript 使用互动手册，也可以查看项目里的 PDF 学习手册。</noscript>
+</body>
+</html>

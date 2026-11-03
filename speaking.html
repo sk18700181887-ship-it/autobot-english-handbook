@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10252d">
+  <title>汽车人口语基地 · 和变形金刚一起说英语</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/badge.svg">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+<svg class="icon-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-13h-8z"/></symbol>
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="M11 4 5 9H2v6h3l6 5zM16 8c2 2 2 6 0 8m3-11c4 4 4 10 0 14"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="13" rx="4"/><path d="M4 10v2a8 8 0 0 0 16 0v-2M12 20v3m-4 0h8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3 6 7 1-5 5 1 8-6-4-6 4 1-8-5-5 7-1z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="m2 5 6-3 8 3 6-3v17l-6 3-8-3-6 3zm6-3v17m8-14v17"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+</defs></svg>
+<header class="site-header">
+  <a class="brand" href="./speaking.html" aria-label="汽车人口语基地首页"><span class="brand-mark"><svg><use href="#i-bolt"/></svg></span><span><b>汽车人口语基地</b><small>AUTOBOT SPEAKING CLUB</small></span></a>
+  <div class="header-right"><span class="local-badge"><i></i> 小小英雄，准备集合</span><button id="parent-open" class="button ghost">家长中心 <span aria-hidden="true">↗</span></button></div>
+</header>
+<div class="workspace">
+  <aside class="mission-sidebar" aria-label="任务导航">
+    <div class="sidebar-heading"><span class="eyebrow">YOUR ADVENTURE</span><h2>任务地图 <span id="map-count">0 / 12</span></h2><p>每次几句话，勇敢说出来。</p></div>
+    <nav id="mission-nav" aria-label="12周口语任务"></nav>
+    <div class="sidebar-note"><svg class="icon"><use href="#i-star"/></svg><div><b>开口就是超能力</b><span>不用答得完美，也可以慢慢来。</span></div></div>
+  </aside>
+  <main>
+    <div class="page-intro"><div><span class="eyebrow">TRANSMISSION / EARTH BASE</span><h1>今天，和汽车人聊什么？</h1></div><button id="map-open" class="button map-toggle"><svg class="icon"><use href="#i-map"/></svg>任务地图</button><div class="day-progress"><svg class="icon"><use href="#i-bolt"/></svg><span>今日互动 <b id="today-count">0</b> 轮</span></div></div>
+    <section class="partner-picker" aria-label="选择口语伙伴"><span class="picker-label">我的伙伴</span><div id="partners" class="partners"></div></section>
+    <a id="handbook-entry" class="robot-lab-entry" href="./handbook.html"><span class="lab-entry-mark">✦</span><span><b>小小汽车人 · 12周学习手册</b><small>6岁亲子版 · 大黄蜂与擎天柱 3D 课程 · 节奏跟读 · 可打印</small></span><strong>翻开冒险手册 ↗</strong></a>
+    <a id="robot-lab-entry" class="robot-lab-entry" href="./robot-lab.html?character=bumblebee"><span class="lab-entry-mark">⤢</span><span><b>汽车人维修站</b><small>电影造型 3D · 拆一拆身体部位，说一句英语</small></span><strong>进入拆解训练 ↗</strong></a>
+    <div class="adventure-board">
+      <section id="character-stage" class="character-stage" aria-label="口语伙伴">
+        <div class="stage-top"><span><i></i> EARTH LINK · 已连接</span><span id="stage-number">MISSION 01</span></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="stage-grid"></div><div class="skyline" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="character-label"><span id="partner-en">BUMBLEBEE</span><h2 id="partner-name">大黄蜂</h2><p id="partner-note">你的活力口语搭档</p></div>
+        <img id="hero-image" class="hero-image" src="./assets/bumblebee.png" alt="大黄蜂" width="1024" height="1536">
+        <div class="scene-token"><span id="scene-icon" aria-hidden="true">👋</span><div><small>本次任务</small><b id="scene-title">你好，汽车人</b></div></div>
+        <div class="platform"></div><div class="stage-bottom"><span class="voice-light" id="voice-light"><i></i><span id="partner-state">等待你的呼叫</span></span><span>BE BRAVE. SPEAK UP.</span></div>
+      </section>
+      <section class="conversation-panel" aria-label="对话练习">
+        <div class="conversation-top"><span class="mission-pill" id="mission-pill">01 · 你好，汽车人</span><button id="global-stop" class="text-button" hidden>停止朗读 ■</button><button id="history-open" class="text-button">对话记录</button></div>
+        <div id="welcome" class="welcome">
+          <span class="welcome-tag">一场属于你的英语冒险</span><h2>小小汽车人，<br>轮到你登场！<span class="spark">✦</span></h2><p id="mission-intro">和新朋友打个招呼，告诉他你的名字吧。</p>
+          <div class="welcome-message"><span class="mini-label">伙伴来电</span><p id="greeting">Hello, friend!</p><span class="welcome-cn">你好呀，我的小伙伴！</span><span class="wave" aria-hidden="true">▂ ▅ ▃ ▇ ▃ ▅ ▂</span></div>
+          <button id="start" class="button primary start-button"><svg class="icon"><use href="#i-bolt"/></svg><span>和大黄蜂开始</span><svg class="icon"><use href="#i-arrow"/></svg></button>
+          <p class="welcome-foot">听一听 → 说一句 → 一起完成任务</p>
+        </div>
+        <div id="exercise" class="exercise" hidden>
+          <div class="turn-progress"><span id="round-label">对话 1 / 4</span><div id="round-dots" class="round-dots"></div><span class="turn-label" id="turn-label">伙伴先说</span></div>
+          <div class="speech-card" aria-live="polite" aria-atomic="true"><span class="mini-label" id="speaker-label">BUMBLEBEE SAYS</span><h2 id="prompt"></h2><p id="prompt-zh" class="chinese"></p><div class="speech-tools"><button id="replay" class="text-button"><svg class="icon"><use href="#i-sound"/></svg>再听一遍</button><button id="slow-replay" class="text-button">慢一点 <span aria-hidden="true">↘</span></button><button id="stop-speech" class="text-button" hidden>停止播放 ■</button></div></div>
+          <div id="answer-area" class="answer-area">
+            <div class="your-turn"><b>到你啦！</b><button id="sample-play" class="text-button">听一句示范 <svg class="icon"><use href="#i-sound"/></svg></button></div>
+            <p id="hint" class="hint chinese"></p><div id="answer-choices" class="answer-choices"></div>
+            <button id="mic" class="button mic-button"><span class="mic-symbol"><svg class="icon"><use href="#i-mic"/></svg></span><span id="mic-label">点一下，开口说</span><span class="mic-bars" aria-hidden="true">▂ ▅ ▇ ▅ ▂</span></button>
+            <p id="voice-status" class="voice-status" role="status">也可以选一句，或在下面打字回答。</p>
+            <form id="answer-form" class="answer-form"><label class="sr-only" for="answer-input">用英语回答</label><input id="answer-input" name="answer" maxlength="180" autocomplete="off" spellcheck="false" placeholder="也可以在这里输入英文…"><button type="submit" aria-label="发送回答"><svg class="icon"><use href="#i-arrow"/></svg></button></form>
+            <p id="answer-error" class="answer-error" role="alert" hidden></p>
+          </div>
+          <div id="feedback" class="feedback" hidden aria-live="polite"><div class="child-answer"><span>你说</span><p id="child-answer"></p><small id="answer-mode"></small></div><div class="partner-feedback"><span aria-hidden="true">✦</span><div><b id="feedback-en"></b><p id="feedback-zh" class="chinese"></p></div></div><button id="next" class="button primary"><span>下一句</span><svg class="icon"><use href="#i-arrow"/></svg></button></div>
+        </div>
+        <div id="completion" class="completion" hidden><div class="medal"><svg><use href="#i-star"/></svg></div><span class="eyebrow">MISSION COMPLETE</span><h2>任务完成，小英雄！</h2><p id="completion-description"></p><div class="earned-words" id="earned-words"></div><button id="next-mission" class="button primary">继续下一个任务 <svg class="icon"><use href="#i-arrow"/></svg></button><button id="practice-again" class="text-button">还想和伙伴再聊一遍 ↻</button></div>
+        <div class="panel-footer"><span><i></i> 大胆说，伙伴会等你</span><button id="restart" class="text-button" hidden>重聊本任务 ↻</button></div>
+      </section>
+    </div>
+    <section class="word-strip" aria-label="本任务能量词"><div><span class="eyebrow">POWER WORDS</span><h2>点一点，听听能量词</h2></div><div id="power-words" class="power-words"></div></section>
+    <footer class="site-footer"><span>12 个主题 · 陪伴每一次勇敢开口</span><span>学习同人作品 · 非官方产品</span></footer>
+  </main>
+</div>
+<dialog id="parent-dialog" class="parent-dialog">
+  <div class="dialog-heading"><div><span class="eyebrow">PARENTS ONLY</span><h2>让每次开口，都轻松一点</h2></div><button class="icon-button" data-close aria-label="关闭家长中心"><svg class="icon"><use href="#i-close"/></svg></button></div>
+  <p class="dialog-intro">根据原来的 12 周计划，改编成 12 组短对话。每次完成一个任务，也可以自由选择感兴趣的主题。</p>
+  <div class="setting-list">
+    <label><span><b>自动播放伙伴的话</b><small>每次新问题与回应，自动读出英文</small></span><input id="setting-auto" type="checkbox" checked></label>
+    <label><span><b>显示中文小提示</b><small>熟悉以后，可以关掉中文再试一次</small></span><input id="setting-chinese" type="checkbox" checked></label>
+    <label><span><b>显示回答小抄</b><small>提供三句可选回答，降低开口难度</small></span><input id="setting-choices" type="checkbox" checked></label>
+    <label><span><b>伙伴说话速度</b><small>内置英语录音，随时可以慢放</small></span><select id="setting-rate"><option value="0.75">慢慢说</option><option value="0.9" selected>自然慢速</option><option value="1">正常速度</option></select></label>
+  </div>
+  <div class="parent-tip"><b>陪孩子用，效果更好</b><p>这是围绕主题的引导式对话，会识别常见英文回答并接话；没有连接大模型，不提供任意话题聊天或发音评分。选句完成同样会记录为互动。</p><p>内置 236 条英语录音，在本机播放；使用统一英语合成音色，并非电影配音。录音中称呼孩子为 partner，英文昵称用于文字互动。</p><p>语音识别由浏览器提供，推荐用 Chrome / Edge 并允许麦克风；部分设备或网络无法识别时，可点选或打字。语音可能由浏览器服务处理；本站不保存孩子的录音或聊天内容。无需使用孩子的真实姓名。</p></div>
+  <div class="parent-stats" id="parent-stats"></div><a class="reference-link" href="./plan-note.html" target="_blank" rel="noopener">查看 12 周课程说明 ↗</a>
+</dialog>
+<dialog id="map-dialog" class="map-dialog"><div class="dialog-heading"><div><span class="eyebrow">CHOOSE YOUR MISSION</span><h2>去哪里冒险？</h2></div><button class="icon-button" data-close aria-label="关闭任务地图"><svg class="icon"><use href="#i-close"/></svg></button></div><nav id="mobile-mission-nav" aria-label="选择口语任务"></nav></dialog>
+<dialog id="history-dialog" class="history-dialog"><div class="dialog-heading"><div><span class="eyebrow">OUR CONVERSATION</span><h2>我们的对话</h2></div><button class="icon-button" data-close aria-label="关闭对话记录"><svg class="icon"><use href="#i-close"/></svg></button></div><p class="dialog-intro">只显示本次任务的对话，刷新后不会保留。</p><div id="history-list"></div></dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+<noscript>请启用 JavaScript 后开始口语互动。</noscript>
+</body>
+</html>

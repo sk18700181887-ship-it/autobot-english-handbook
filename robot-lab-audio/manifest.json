@@ -1,0 +1,19 @@
+{
+  "Chest": "378d83808237a445.wav",
+  "Arms": "f831a06b4f44aa71.wav",
+  "Hands": "6b7204778686145f.wav",
+  "Legs": "38557594d0fce7fe.wav",
+  "Feet": "c59e96abc48597b1.wav",
+  "This is his head.": "323ea16c36bcd9ea.wav",
+  "This is his chest.": "25632bfc278f8391.wav",
+  "These are his arms.": "5201b03fee783874.wav",
+  "These are his hands.": "e7c38035cc191fbc.wav",
+  "These are his legs.": "e58fc7276193435f.wav",
+  "These are his feet.": "f7207b11f46e7324.wav",
+  "Show me his head.": "3a43a80f9ee129db.wav",
+  "Open the chest.": "e93bdab3009eb150.wav",
+  "Take off the arms.": "f527989cbd65d5f1.wav",
+  "Put the arms back.": "43b752b755f12c7f.wav",
+  "Take the robot apart.": "3e897f4ac95e3f59.wav",
+  "Assemble the robot.": "2b70d9973e3f2380.wav"
+}
